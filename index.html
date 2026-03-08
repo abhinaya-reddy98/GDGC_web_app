@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Shopping Cart</title>
+<title>EliteShop</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-<h1>🛍️ SmartShop</h1>
-<div class="cart-icon">
-Cart 🛒 <span id="cart-count">0</span>
-</div>
-</header>
 
+<!-- NAVBAR -->
 
-<section class="products">
+<nav class="navbar">
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
-<h3>Smartphone</h3>
-<p>$499</p>
-<button onclick="addToCart('Smartphone',499)">Add to Cart</button>
-</div>
+<div class="logo">EliteShop</div>
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="">
-<h3>Laptop</h3>
-<p>$899</p>
-<button onclick="addToCart('Laptop',899)">Add to Cart</button>
+<ul class="nav-links">
+<li>Home</li>
+<li>Products</li>
+<li>Contact</li>
+</ul>
+
+<div class="cart-btn" onclick="toggleCart()">
+🛒 Cart <span id="cart-count">0</span>
 </div>
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
-<h3>Headphones</h3>
-<p>$199</p>
-<button onclick="addToCart('Headphones',199)">Add to Cart</button>
-</div>
+</nav>
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="">
-<h3>Smart Watch</h3>
-<p>$149</p>
-<button onclick="addToCart('Smart Watch',149)">Add to Cart</button>
-</div>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<h1>Discover Premium Tech</h1>
+<p>Upgrade your lifestyle with modern gadgets</p>
+<button onclick="scrollToProducts()">Shop Now</button>
 
 </section>
 
 
 
-<section class="cart">
+<!-- PRODUCTS -->
+
+<section class="products" id="products"></section>
+
+
+
+<!-- CART SIDEBAR -->
+
+<div class="cart-sidebar" id="cart">
+
 <h2>Your Cart</h2>
-<ul id="cart-items"></ul>
 
-<h3>Total: $<span id="cart-total">0</span></h3>
+<div id="cart-items"></div>
+
+<div class="cart-total">
+Total: $<span id="total-price">0</span>
+</div>
+
 <button class="checkout">Checkout</button>
-</section>
+
+</div>
 
 
 <script src="script.js"></script>
+
 </body>
 </html>
