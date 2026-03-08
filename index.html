@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<title>Shopping Cart</title>
-  	<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Shopping Cart</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Shopping Cart</h1>
-    <div class="products">
-        <div class="product" price="500" dis="50">
-            <img src="https://wallpapercave.com/wp/wp1853720.jpg">
-            <p>Classic Leather Watch</p>
-            <p>Price - ₹500 (Discount: ₹50)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-        <div class="product" price="300" dis="30">
-            <img src="https://wallpapercave.com/wp/wp1853721.jpg">
-            <p>Elegant Silver Timepiece</p>
-            <p>Price - ₹300 (Discount: ₹30)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-        <div class="product" price="700" dis="70">
-            <img src="https://pngimg.com/uploads/watches/watches_PNG9863.png">
-            <p>Modern Casual Watch</p>
-            <p>Price - ₹700 (Discount: ₹70)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-        <div class="product" price="450" dis="45">
-            <img src="https://images.meesho.com/images/products/518602606/1bjpd_512.webp?width=512">
-            <p>Luxury Gold Wristwatch</p>
-            <p>Price - ₹450 (Discount: ₹45)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-        <div class="product" price="600" dis="60">
-            <img src="http://images6.alphacoders.com/349/349397.jpg">
-            <p>Sophisticated Smartwatch</p>
-            <p>Price - ₹600 (Discount: ₹60)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-        <div class="product" price="800" dis="80">
-            <img src="https://www.bhphotovideo.com/images/images2500x2500/apple_mj2x2ll_a_watch_sport_smartwatch_38mm_1187194.jpg">
-            <p>Trendy Sports Watch</p>
-            <p>Price - ₹800 (Discount: ₹80)</p>
-            <button onclick="addToCart(this)">Add to Cart</button>
-        </div>
-    </div>
-    <h2>Total Amount: <span id="total-amt">₹0</span></h2>
-    <h2>Total Discount: <span id="total-dis">₹0</span></h2>
-    <h2>Final Amount: <span id="final-amt">₹0</span></h2>
-    <div class="order">
-        <button onclick="placeOrder()">Place Order</button>
-    </div>
-    <script src="script.js"></script>
+
+<header>
+<h1>🛍️ SmartShop</h1>
+<div class="cart-icon">
+Cart 🛒 <span id="cart-count">0</span>
+</div>
+</header>
+
+
+<section class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
+<h3>Smartphone</h3>
+<p>$499</p>
+<button onclick="addToCart('Smartphone',499)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="">
+<h3>Laptop</h3>
+<p>$899</p>
+<button onclick="addToCart('Laptop',899)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
+<h3>Headphones</h3>
+<p>$199</p>
+<button onclick="addToCart('Headphones',199)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="">
+<h3>Smart Watch</h3>
+<p>$149</p>
+<button onclick="addToCart('Smart Watch',149)">Add to Cart</button>
+</div>
+
+</section>
+
+
+
+<section class="cart">
+<h2>Your Cart</h2>
+<ul id="cart-items"></ul>
+
+<h3>Total: $<span id="cart-total">0</span></h3>
+<button class="checkout">Checkout</button>
+</section>
+
+
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
-
